@@ -6,8 +6,6 @@
 #
 default: &default
   adapter: postgresql
-  username: postgres
-  password: 123456
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -23,4 +21,8 @@ test:
 
 production:
   <<: *default
-  database: fundus
+  Host: ec2-54-225-68-133.compute-1.amazonaws.com
+  Database: d9flvthupji4ii
+  User: npyabizwfchdgv
+  Port: 5432
+  
